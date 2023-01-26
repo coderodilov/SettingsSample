@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#BDDCF0"
+        android:elevation="10dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp">
+
+        <ImageView
+            android:id="@+id/btnSettings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/settings"
+            tools:ignore="ContentDescription" />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieSnow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_rawRes="@raw/snow"
+        app:lottie_repeatCount="100" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieSanta"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:lottie_rawRes="@raw/santa"
+        app:lottie_repeatCount="100" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieMoon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        android:layout_alignParentEnd="true"
+        app:lottie_rawRes="@raw/moon"
+        app:lottie_repeatCount="100" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieTree"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textCardView"
+        android:layout_centerHorizontal="true"
+        android:scaleType="center"
+        app:lottie_rawRes="@raw/tree"
+        app:lottie_repeatCount="100" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/textCardView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="20dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:id="@+id/textBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="#BBD9EC"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textNewYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/happy_new_year"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="35sp"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
